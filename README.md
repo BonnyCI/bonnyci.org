@@ -13,6 +13,10 @@ BonnyCI is a Continuous Integration service offered to developers of Open Source
 Checkout the [getting started](getting_started) section.
 
 ## Contributing
+Please see the [contribution documentation](contributing) for more information.
+
+
 A brief note on repository naming...
 > The puns get made, or the plank gets walked.
-> - Jesse Keating
+>
+> ~Jesse Keating
