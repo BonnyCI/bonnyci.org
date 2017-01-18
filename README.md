@@ -1,5 +1,5 @@
 # BonnyCI Documentation
-[![Build Status](https://travis-ci.org/BonnyCI/docs.svg?branch=master)](https://travis-ci.org/BonnyCI/docs)
+[![Build Status](https://travis-ci.org/BonnyCI/lore.svg?branch=master)](https://travis-ci.org/BonnyCI/lore)
 
 ## Table of Contents
 - [Introduction](#introduction)
