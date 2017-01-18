@@ -6,11 +6,19 @@ cache:
 language: python
 python: '2.7'
 
+addons:
+  apt:
+    sources:
+      - debian-sid
+    packages:
+      - shellcheck
+
 matrix:
   fast_finish: true
 
 env:
   - TEST_RUN="tests/textlint-test.sh"
+  - TEST_RUN="tests/shellcheck-test.sh"
   - TEST_RUN="tests/signed-off-by-test.sh"
 
 install:
