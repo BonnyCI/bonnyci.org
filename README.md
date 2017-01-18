@@ -3,20 +3,14 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
+- [End Users](#end-users)
+- [Developers](#developers)
 
 ## Introduction
 BonnyCI is a Continuous Integration service offered to developers of Open Source projects.
 
-## Getting Started
-Checkout the [getting started](getting_started) section.
+## End Users
+Please see the [end user documentation](end_users) for more information.
 
-## Contributing
-Please see the [contribution documentation](contributing) for more information.
-
-
-A brief note on repository naming...
-> The puns get made, or the plank gets walked.
->
-> ~Jesse Keating
+## Developers
+Please see the [developer documentation](developers) for more information.
