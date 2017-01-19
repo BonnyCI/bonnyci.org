@@ -5,10 +5,9 @@ Install required software:
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - [Vagrant](https://www.vagrantup.com/downloads.html)
 
-Install ansible, basic command line tools and nodejs:
+Install some basic command line tools and nodejs:
 
 ```shell
-$ brew install ansible
 $ brew install coreutils
 $ brew install node
 ```
@@ -26,10 +25,10 @@ Install the python package manager pip:
 $ curl https://bootstrap.pypa.io/get-pip.py | python
 ```
 
-Install setuptools, virtualenv and virtualenvwrapper:
+Install ansible, setuptools, virtualenv and virtualenvwrapper:
 
 ```shell
-$ sudo pip install setuptools virtualenv virtualenvwrapper
+$ sudo pip install ansible setuptools virtualenv virtualenvwrapper
 ```
 
 Add the following to your `~/.bash_profile`:
