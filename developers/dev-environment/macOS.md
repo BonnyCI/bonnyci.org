@@ -34,7 +34,7 @@ $ sudo pip install ansible setuptools virtualenv virtualenvwrapper
 Add the following to your `~/.bash_profile`:
 
 ```shell
-export WORKON_HOME=~/virtualenvs
+export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
