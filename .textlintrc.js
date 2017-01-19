@@ -1,18 +1,20 @@
 "use strict"
 module.exports = {
   "rules": {
-    "no-todo": {
-    },
-    "no-empty-section": {
+    "alex": {
     },
     "common-misspellings": {
       "ignore": []
     },
-    "alex": {
+    "no-dead-link": {
+    },
+    "no-empty-section": {
     },
     "rousseau": {
       "ignoreTypes": [],
       "showLevels": ["suggestion", "warning", "error"]
+    },
+    "no-todo": {
     }
   }
 }

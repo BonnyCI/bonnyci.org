@@ -24,8 +24,9 @@ env:
 install:
   - nvm install stable
   - nvm use stable
-  - npm install -g textlint textlint-plugin-markdown textlint-rule-no-todo textlint-rule-no-empty-section
-    textlint-rule-common-misspellings textlint-rule-alex textlint-rule-rousseau
+  - npm install -g textlint textlint-rule-alex textlint-rule-common-misspellings
+    textlint-rule-no-dead-link textlint-rule-no-empty-section
+    textlint-rule-rousseau textlint-rule-no-todo
 
 script: "$TEST_RUN"
 
