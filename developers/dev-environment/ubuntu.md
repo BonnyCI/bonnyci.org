@@ -3,7 +3,7 @@
 Run the following to install most of the needed packages:
 
 ```shell
-$ sudo apt-get install python-dev build-essential python-software-properties python-pip vagrant virtualbox
+$ sudo apt-get install build-essential libssl-dev libffi-dev python-dev python-pip python-software-properties vagrant virtualbox
 ```
 
 Install [vagrant-hostmanager](https://github.com/devopsgroup-io/vagrant-hostmanager), and [vagrant-triggers](https://github.com/emyl/vagrant-triggers):
