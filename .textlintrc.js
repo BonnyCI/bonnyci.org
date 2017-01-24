@@ -11,7 +11,7 @@ module.exports = {
     "no-empty-section": {
     },
     "rousseau": {
-      "ignoreTypes": [],
+      "ignoreTypes": ["sentence:uppercase"],
       "showLevels": ["suggestion", "warning", "error"]
     },
     "no-todo": {
