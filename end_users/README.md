@@ -3,12 +3,17 @@
 ## Table of Contents
 
 * [Setup](#setup)
+* [Using BonnyCI](#using-bonnyci)
 * [Bug Reports](#bug-reports)
 * [Feature Requests](#feature-requests)
 
 ## Setup
 
 Check out the [setup documentation](setup/README.md) for instructions on how to get started with BonnyCI!
+
+## Using BonnyCI
+
+Once you have your repo set up to use BonnyCI, check out the [use documentation](use/README.md) for information on the BonnyCI process.
 
 ## Bug Reports
 
