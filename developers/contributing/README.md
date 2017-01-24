@@ -6,6 +6,7 @@
   - [Commit Message](#commit-message)
     - [Sign-off](#sign-off)
 - [Pull Requests](#pull-requests)
+- [Design Documents](#design-documents)
 
 ## BonnyCI Workflow
 We use the [GitHub flow](https://guides.github.com/introduction/flow/) for code changes.
@@ -38,3 +39,10 @@ Anyone may review or comment on pull requests, but a member of the BonnyCI Capta
 
 
 If a pull request is a work in progress, please start the title with `[WIP]`. It is not necessary to include `[WIP]` in commit messages, but if you do, please remove it before it gets merged.
+
+
+## Design Documents
+Changes to BonnyCI should follow a design document. To propose a design document, open a pull requests to the lore repository. BonnyCI contributors will review and debate the proposed document via pull request comments until the document is accepted. When the pull request is merged, development can begin.
+
+
+Design documents exist in the [design documentation](designs) directory.
