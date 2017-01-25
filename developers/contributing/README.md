@@ -42,7 +42,7 @@ If a pull request is a work in progress, please start the title with `[WIP]`. It
 
 
 ## Design Documents
-Changes to BonnyCI should follow a design document. To propose a design document, open a pull requests to the lore repository. BonnyCI contributors will review and debate the proposed document via pull request comments until the document is accepted. When the pull request is merged, development can begin.
+Changes to BonnyCI should follow a design document. To propose a design document, open a pull requests to the [lore repository](https://github.com/BonnyCI/lore). BonnyCI contributors will review and debate the proposed document via pull request comments until the document is accepted. When the pull request is merged, development can begin.
 
 
 Design documents exist in the [design documentation](designs) directory.
