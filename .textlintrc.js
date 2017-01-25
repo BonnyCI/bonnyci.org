@@ -2,6 +2,7 @@
 module.exports = {
   "rules": {
     "alex": {
+      "severity" : "warning"
     },
     "common-misspellings": {
       "ignore": []
