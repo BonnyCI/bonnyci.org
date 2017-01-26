@@ -17,6 +17,7 @@ matrix:
   fast_finish: true
 
 env:
+  - TEST_RUN="tests/markdownlint-cli-test.sh"
   - TEST_RUN="tests/textlint-test.sh"
   - TEST_RUN="tests/shellcheck-test.sh"
   - TEST_RUN="tests/signed-off-by-test.sh"
@@ -24,9 +25,9 @@ env:
 install:
   - nvm install stable
   - nvm use stable
-  - npm install -g textlint textlint-rule-alex textlint-rule-common-misspellings
-    textlint-rule-no-dead-link textlint-rule-no-empty-section
-    textlint-rule-rousseau textlint-rule-no-todo
+  - npm install -g markdownlint-cli textlint textlint-rule-alex
+    textlint-rule-common-misspellings textlint-rule-no-dead-link
+    textlint-rule-no-empty-section textlint-rule-rousseau textlint-rule-no-todo
 
 script: "$TEST_RUN"
 
