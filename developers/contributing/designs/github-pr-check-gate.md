@@ -63,6 +63,7 @@ Example:
 The Gate Pipeline is the series of jobs that must occur prior to a Pull Request being merged. The Gate Pipeline is a queue of Pull Requests that can be tested together. Zuul builds the Gate Pipeline queue based on when Pull Requests are triggered and what jobs they share in the pipeline[1]. When a Pull Request passes the Gate Pipeline, it is automatically merged into the target branch. Therefore, the requirements for triggering the Gate Pipeline are more stringent than they are for the Check Pipeline.
 
 ![gate pipeline](github_gate_pipeline.png)
+
 ### Triggering the Gate Pipeline
 
 The Zuul server initiates the Gate Pipeline when it receives a GitHub event payload for the following events:
@@ -88,9 +89,9 @@ Once the jobs in the Gate Pipeline have completed, Zuul posts the following usin
 #### Passing the Gate Pipeline
 
 1. Zuul posts a new status for the commit set to `success`
-1. Zuul merges the Pull Request by making a call to the GitHub API
+2. Zuul merges the Pull Request by making a call to the GitHub API
 
 #### Failing the Gate Pipeline
 
 1. Zuul posts a new status for the commit set to `failure`
-1. Zuul posts a new Pull Request comment indicating the merge failed, (with a link to the logs URL from the job(s) executions)
+2. Zuul posts a new Pull Request comment indicating the merge failed, (with a link to the logs URL from the job(s) executions)
