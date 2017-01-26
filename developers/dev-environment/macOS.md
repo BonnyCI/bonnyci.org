@@ -1,9 +1,10 @@
 # Instructions for macOS
 
 Install required software:
-- [Homebrew](http://brew.sh/)
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- [Vagrant](https://www.vagrantup.com/downloads.html)
+
+* [Homebrew](http://brew.sh/)
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* [Vagrant](https://www.vagrantup.com/downloads.html)
 
 Install some basic command line tools and nodejs:
 
