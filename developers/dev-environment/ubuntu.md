@@ -1,22 +1,16 @@
 # Instructions for Ubuntu
 
+## Table of Contents
+
+* [Python Tools](#python-tools)
+* [Virtualization Tools](#virtualization-tools)
+
+## Python Tools
+
 Run the following to install most of the needed packages:
 
 ```shell
-$ sudo apt-get install build-essential libssl-dev libffi-dev python-dev python-pip python-software-properties vagrant virtualbox
-```
-
-Install [vagrant-hostmanager](https://github.com/devopsgroup-io/vagrant-hostmanager), and [vagrant-triggers](https://github.com/emyl/vagrant-triggers):
-
-```shell
-$ vagrant plugin install vagrant-hostmanager vagrant-triggers
-```
-
-Add the official nodejs ppa, then install nodejs and its package manager, npm:
-
-```shell
-$ curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-$ sudo apt-get install nodejs
+$ sudo apt-get install build-essential libssl-dev libffi-dev python-dev python-pip python-software-properties
 ```
 
 Install ansible, setuptools, virtualenv and virtualenvwrapper:
@@ -36,4 +30,18 @@ Activate virtualenvwrapper:
 
 ```shell
 $ source ~/.bashrc
+```
+
+## Virtualization Tools
+
+Install [VirtualBox](https://www.virtualbox.org) and [Vagrant](https://www.vagrantup.com) for running local virtual machines:
+
+```shell
+$ sudo apt-get install vagrant virtualbox
+```
+
+Install [vagrant-hostmanager](https://github.com/devopsgroup-io/vagrant-hostmanager), and [vagrant-triggers](https://github.com/emyl/vagrant-triggers):
+
+```shell
+$ vagrant plugin install vagrant-hostmanager vagrant-triggers
 ```

@@ -1,16 +1,19 @@
 # Instructions for macOS
 
-Install required software:
+## Table of Contents
 
-* [Homebrew](http://brew.sh/)
-* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-* [Vagrant](https://www.vagrantup.com/downloads.html)
+* [Basic Tools](#basic-tools)
+* [Python Tools](#python-tools)
+* [Virtualization Tools](#virtualization-tools)
 
-Install some basic command line tools and nodejs:
+## Basic Tools
+
+Install [Homebrew](http://brew.sh/) to get a package manager.
+
+Install some basic command line tools:
 
 ```shell
 $ brew install coreutils
-$ brew install node
 ```
 
 You can get by with coreutils with prefixing commands you want with a `g`. For instance, `rm` would be `grm`. If you don't want to think about that too much, add the following to your `~/.bash_profile`:
@@ -19,6 +22,8 @@ You can get by with coreutils with prefixing commands you want with a `g`. For i
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:/usr/local/sbin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 ```
+
+## Python Tools
 
 Install the python package manager pip:
 
@@ -44,6 +49,10 @@ Enable virtualenvwrapper:
 ```shell
 $ source ~/.bash_profile
 ```
+
+## Virtualization Tools
+
+Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html) for running local virtual machines.
 
 Install [vagrant-hostmanager](https://github.com/devopsgroup-io/vagrant-hostmanager), and [vagrant-triggers](https://github.com/emyl/vagrant-triggers):
 
