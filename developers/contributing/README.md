@@ -8,6 +8,7 @@
     * [Sign-off](#sign-off)
 * [Pull Requests](#pull-requests)
 * [Design Documents](#design-documents)
+* [Adding Projects](#adding-bonnyci-projects)
 
 ## BonnyCI Workflow
 
@@ -49,3 +50,20 @@ If a pull request is a work in progress, please start the title with `[WIP]`. It
 Changes to BonnyCI should follow a design document. To propose a design document, open a pull requests to the [lore repository](https://github.com/BonnyCI/lore). BonnyCI contributors will review and debate the proposed document via pull request comments until the document is accepted. When the pull request is merged, development can begin.
 
 Design documents exist in the [design documentation](designs) directory.
+
+## Adding BonnyCI Projects
+
+Adding a project to BonnyCI requires consensus from the BonnyCI admin team. The fastest way to reach out is to via [IRC](../README.md#irc). If a response is not given in a reasonable amount of time, feel free to raise a request at the [projman issue tracker](https://github.com/BonnyCI/projman) and the admin team will address it as soon as possible.
+
+Requirements for new projects:
+
+* A README containing some basic information. Instructions and complex information should be added to BonnyCI's documentation repo, [lore](https://github.com/BonnyCI/projman/issues).
+
+* Basic automated testing:
+  * A [signed-off-by test](https://github.com/BonnyCI/lore/blob/master/tests/signed-off-by-test.sh) is a requirement for all projects in BonnyCI. This can be easily implemented using [TravisCI](https://travis-ci.org/) via a [single configuration file](https://github.com/BonnyCI/lore/blob/master/.travis.yml). For more information, check out the [TravisCI documentation](https://docs.travis-ci.com/).
+  * Syntax linters are highly recommended.
+  * Unit tests and functional tests are highly recommended where applicable.
+
+* If a repository uses TravisCI for any testing, a [TravisCI badge](https://docs.travis-ci.com/user/status-images/) should be embedded at the top of its README.
+
+* At least a basic set of working content. BonnyCI will not add projects that are empty or barebones (e.g. only contain a README).
