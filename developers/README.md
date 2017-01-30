@@ -27,20 +27,20 @@ $ git clone git@github.com:BonnyCI/hoist.git
 $ cd hoist
 ```
 
-To perform a full deploy::
+To perform a full deploy:
 
 ```shell
 $ vagrant up
 ```
 
-To redeploy just the nodepool VM::
+To redeploy just the nodepool VM:
 
 ```shell
 $ vagrant destroy nodepool
 $ vagrant up nodepool
 ```
 
-To inspect the zuul VM::
+To inspect the zuul VM:
 
 ```shell
 $ vagrant ssh zuul
@@ -48,7 +48,7 @@ $ # netstat, tcpdump, tail logs, etc.
 $ logout
 ```
 
-To tear down the entire stack when you're done::
+To tear down the entire stack when you're done:
 
 ```shell
 $ vagrant destroy
