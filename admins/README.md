@@ -11,16 +11,16 @@ The BonnyCI system is made up of the following components:
 
 * [Bastion](#bastion)
 * [Zuul](#zuul)
-  * [Server](#server)
-  * [Launcher](#launcher)
-  * [Merger](#merger)
-  * [Web App](#web app)
+  * [Server](#zuul-server)
+  * [Launcher](#zuul-launcher)
+  * [Merger](#zuul-merger)
+  * [Web App](#zuul-web-app)
 * [Nodepool](#nodepool)
-  * [Server](#server)
-  * [Builder](#builder)
-  * [Launcher](#launcher)
-  * [Deleter](#deleter)
-* [Logs host](#logs host)
+  * [Server](#nodepool-server)
+  * [Builder](#nodepool-builder)
+  * [Launcher](#nodepool-launcher)
+  * [Deleter](#nodepool-deleter)
+* [Logs host](#logs-host)
 
 ### Bastion
 
