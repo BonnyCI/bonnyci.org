@@ -2,83 +2,18 @@
 
 ## Table of Contents
 
-* [Merge Options](#merge-options)
-  * [Setting the Correct Merge Option](#setting-the-correct-merge-option)
+* [Setup](#setup)
 * [Bug Reports](#bug-reports)
-  * [Bug Report Requirements](#bug-report-requirements)
-  * [Bug Lifecycle](#bug-lifecycle)
 * [Feature Requests](#feature-requests)
-  * [Feature Request Requirements](#feature-request-requirements)
-  * [Feature Request Lifecycle](#feature-request-lifecycle)
 
-## Merge Options
+## Setup
 
-Repositories that use BonnyCI should not use any merge strategy which changes the SHA of the commit. This is because [zuul](https://github.com/openstack-infra/zuul), the scheduler used in BonnyCI, will be thrown off by the change in SHA if multiple changes are running in the gate. BonnyCI tests the changes in the pull requests without altering them. To ensure that which is tested is what is merged, do not enable a merge strategy that would alter the pull request content upon merging it.
-
-GitHub presents repository owners with 3 choices for what happens when merging a pull request:
-
-* Create a merge commit
-* Squash and merge
-* Rebase and merge
-
-For more on these options and what they mean, read the [documentation on merge methods](https://help.github.com/articles/about-merge-methods-on-github/) provided by GitHub.
-
-### Setting the Correct Merge Option
-
-In order for BonnyCI to function correctly, please only allow merge commits. From your repository's home page, navigate to the `Settings` tab. Scroll down to the section labeled `Merge button`, and ensure that it matches the following:
-
-![Correct Merge Button Configuration](../misc/images/mergebutton.png)
+Check out the [setup documentation](setup/README.md) for instructions on how to get started with BonnyCI!
 
 ## Bug Reports
 
-If you encounter an issue which you think is a bug, please submit it to the [projman issue tracker](https://github.com/BonnyCI/projman/issues). Make sure that a similar bug has not already been filed, and post on that bug's issue conversation if it has.  The bug report will be reviewed and may be forwarded to an appropriate BonnyCI subrepository.
-
-### Bug Report Requirements
-
-* A descriptive title. Use keywords so others can find your bug to avoid duplicates and improve its visibility.
-* Limited to one bug. If you have another bug to report, please raise a separate issue.
-* Links to your project's:
-  * relevant BonnyCI logs
-  * BonnyCI configuration file, `.bonnyci`
-  * Any other miscellaneous scripts that BonnyCI might be kicking off.
-* The expected result or output that BonnyCI will produce.
-* The actual result or output that BonnyCI is currently producing.
-* The following details about your environment:
-  * BonnyCI version or latest SHA if you are running from source.
-  * Any tools you may be installing that are relevant to the issue (ex: if BonnyCI is running a linter, include a link to this linter).
-  * The primary language(s) of your project.
-* The red `bug` label.
-* Please do not add a milestone label. If deemed necessary, this will be added by the BonnyCI Admin team.
-
-The BonnyCI admin team will be alerted after the bug report is submitted, and a team member will respond. Further clarification or details may be required depending on the situation.
-
-### Bug Lifecycle
-
-1. New bug is filed; awaiting review.
-2. Triaged in bug review and assigned to a developer.
-3. Developer begins working on it -- bug is tagged `fix_in_progress`.
-4. Developer opens pull request with a fix, which must be reviewed and tested -- a link to the pull request appears in the bug's activity stream.
-5. Pull request is merged, and the bug's filer is pinged to verify that it's fixed -- bug is tagged `fixed_but_not_closed`.
-6. Filer agrees that it's fixed -- bug is closed, and its milestone is set to the release the fix landed in.
+Check out the [bug report documentation](issues/README.md#bug-reports) for guidlines on submitting bug reports.
 
 ## Feature Requests
 
-If you wish for a feature to be added to BonnyCI, please submit it to the [projman issue tracker](https://github.com/BonnyCI/projman/issues). Make sure that a similar feature request has not already been filed, and post on that feature request's issue conversation if it has. The feature request will be reviewed and added to a milestone if it is deemed beneficial to the project.
-
-### Feature Request Requirements
-
-* A descriptive title. Use keywords so others can find your feature request to avoid duplicates and improve its visibility.
-* Limited to one feature. If you have another feature to request, please raise a separate issue.
-* Short and precise requirements such as "BonnyCI support for Zuul v3". If the feature request has multiple moving parts, it may be transferred to an EPIC that is broken down into smaller feature additions.
-* A short explanation (2-3 sentences) of why you think the feature will be beneficial to the long-term health of the project.
-* The blue `enhancement` label available in the issue tracker.
-* Please do not add a milestone label. If deemed necessary, this will be added by the BonnyCI Admin team.
-
-### Feature Request Lifecycle
-
-1. New feature request is filed; awaiting review.
-2. Triaged in backlog grooming and assigned to a developer.
-3. Developer begins working on it -- feature request is tagged `feature_in_progress`.
-4. Developer opens pull request, which must be reviewed and tested -- a link to the pull request appears in the feature request's activity stream.
-5. Pull request is merged, and the feature request's filer is pinged to verify that the desired functionality is present -- feature request is tagged `fixed_but_not_closed`.
-6. Filer agrees that it's fixed -- feature request is closed, and its milestone is set to the release the fix landed in.
+Check out the [feature request documentation](issues/README.md#feature-requests) for guidelines on submitting feature requests.
