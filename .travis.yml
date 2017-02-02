@@ -19,8 +19,9 @@ env:
   - TEST_RUN="tests/signed-off-by-test.sh"
 
 install:
-  - nvm install stable
-  - nvm use stable
+  - nvm deactivate
+  - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+  - sudo apt-get install -y nodejs
 
 script: "$TEST_RUN"
 
