@@ -8,6 +8,7 @@ module.exports = {
       "ignore": []
     },
     "no-dead-link": {
+      "severity" : "warning"
     },
     "no-empty-section": {
     },
