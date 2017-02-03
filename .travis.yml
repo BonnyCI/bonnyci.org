@@ -14,7 +14,6 @@ matrix:
 
 env:
   - TEST_RUN="tests/markdownlint-cli-test.sh"
-  - TEST_RUN="tests/textlint-test.sh"
   - TEST_RUN="tests/shellcheck-test.sh"
   - TEST_RUN="tests/signed-off-by-test.sh"
 
