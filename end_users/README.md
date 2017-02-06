@@ -6,6 +6,7 @@
 * [Using BonnyCI](#using-bonnyci)
 * [Bug Reports](#bug-reports)
 * [Feature Requests](#feature-requests)
+* [Status Page](#status-page)
 
 ## Setup
 
@@ -22,3 +23,7 @@ Check out the [bug report documentation](issues/README.md#bug-reports) for guidl
 ## Feature Requests
 
 Check out the [feature request documentation](issues/README.md#feature-requests) for guidelines on submitting feature requests.
+
+## Status Page
+
+Check out the [status page](https://p.datadoghq.com/sb/cbf19e221-1b77fb05f2) to see some monitoring and metrics for BonnyCI. For detailed explanations of what the items on this page mean, check out out the [status page documentation](status/README.md).
