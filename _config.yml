@@ -29,8 +29,10 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-relative-links
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor/bundle
 include:
   - lore
