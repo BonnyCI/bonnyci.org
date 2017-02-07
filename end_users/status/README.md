@@ -1,3 +1,8 @@
+---
+name: status
+layout: default
+---
+
 # Status
 
 ## Table of Contents

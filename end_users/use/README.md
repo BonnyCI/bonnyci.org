@@ -1,3 +1,9 @@
+---
+name: use
+layout: default
+permalink: /lore/end_users/use/
+---
+
 # Use
 
 ## Table of Contents

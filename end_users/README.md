@@ -1,3 +1,9 @@
+---
+name: end users
+layout: default
+permalink: /lore/end_users/
+---
+
 # End Users
 
 ## Table of Contents

@@ -1,3 +1,8 @@
+---
+name: github pr check gate
+layout: default
+---
+
 # Check and Gating Pipeline Management with Zuul and GitHub
 
 ## Problem Statement

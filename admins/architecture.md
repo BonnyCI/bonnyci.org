@@ -1,3 +1,8 @@
+---
+name: architecture
+layout: default
+---
+
 # Architecture
 
 ## Table of Contents

@@ -1,3 +1,8 @@
+---
+name: holding a node
+layout: default
+---
+
 # Holding a Node
 
 ## Table of Contents

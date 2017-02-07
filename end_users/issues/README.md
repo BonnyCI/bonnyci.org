@@ -1,3 +1,9 @@
+---
+name: issues
+layout: default
+permalink: /lore/end_users/issues/
+---
+
 # Issues
 
 ## Table of Contents
