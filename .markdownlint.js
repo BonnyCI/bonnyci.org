@@ -33,6 +33,6 @@
   "no-space-in-code": true,
   "no-space-in-links": true,
   "fenced-code-language": true,
-  "first-line-h1": { "level": "1" },
+  "first-line-h1": false,
   "no-empty-links": true
 }
