@@ -1,0 +1,28 @@
+---
+dist: trusty
+sudo: required
+
+cache:
+  directories:
+    - "$(npm config get prefix)/bin"
+
+language: python
+python: '2.7'
+
+matrix:
+  fast_finish: true
+
+env:
+  - TEST_RUN="tests/markdownlint-cli-test.sh"
+  - TEST_RUN="tests/shellcheck-test.sh"
+  - TEST_RUN="tests/signed-off-by-test.sh"
+
+install:
+  - nvm deactivate
+  - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+  - sudo apt-get install -y nodejs
+
+script: "$TEST_RUN"
+
+notifications:
+  email: false
