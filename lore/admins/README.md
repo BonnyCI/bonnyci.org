@@ -1,3 +1,9 @@
+---
+name: admins
+layout: default
+permalink: /lore/admins/
+---
+
 # Administrators
 
 ## Table of Contents

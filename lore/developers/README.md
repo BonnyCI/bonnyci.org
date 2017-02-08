@@ -1,3 +1,9 @@
+---
+name: developers
+layout: default
+permalink: /lore/developers/
+---
+
 # Developers
 
 ## Table of Contents

@@ -1,3 +1,10 @@
+---
+name: lore
+title: lore
+layout: default
+permalink: /lore/
+---
+
 # BonnyCI Documentation
 
 [![Build Status](https://travis-ci.org/BonnyCI/lore.svg?branch=master)](https://travis-ci.org/BonnyCI/lore)

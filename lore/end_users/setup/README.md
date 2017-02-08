@@ -1,3 +1,9 @@
+---
+name: setup
+layout: default
+permalink: /lore/end_users/setup/
+---
+
 # Setup
 
 ## Table of Contents

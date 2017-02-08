@@ -1,3 +1,8 @@
+---
+name: ubuntu
+layout: default
+---
+
 # Instructions for Ubuntu
 
 ## Table of Contents

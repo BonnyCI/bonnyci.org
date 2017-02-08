@@ -1,3 +1,8 @@
+---
+name: macOS
+layout: default
+---
+
 # Instructions for macOS
 
 ## Table of Contents

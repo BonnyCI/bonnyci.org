@@ -1,3 +1,9 @@
+---
+name: designs
+layout: default
+permalink: /lore/developers/contributing/designs/
+---
+
 # Design Documents
 
 ## Table of Contents
