@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+show_header_link: true
 ---
 
 BonnyCI is a continuous integration (CI) service for Open Source projects.
