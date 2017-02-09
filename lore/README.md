@@ -3,6 +3,7 @@ name: lore
 title: lore
 layout: default
 permalink: /lore/
+show_header_link: true
 ---
 
 # BonnyCI Documentation
