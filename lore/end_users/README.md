@@ -32,4 +32,4 @@ Check out the [feature request documentation](issues/README.md#feature-requests)
 
 ## Status Page
 
-Check out the [status page](https://p.datadoghq.com/sb/cbf19e221-1b77fb05f2) to see some monitoring and metrics for BonnyCI. For detailed explanations of what the items on this page mean, check out out the [status page documentation](status/README.md).
+Check out the [status page](../../status) for a list of BonnyCI's status pages.

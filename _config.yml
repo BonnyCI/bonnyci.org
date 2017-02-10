@@ -34,3 +34,4 @@ exclude:
   - vendor/bundle
 include:
   - lore
+  - status
