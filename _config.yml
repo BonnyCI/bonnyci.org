@@ -18,9 +18,9 @@ email: admins@bonnyci.org
 description: > # this means to ignore newlines until "baseurl:"
   BonnyCI is a continuous integration (CI) service for Open Source projects.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://bonnyci.org" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: CiBonny
+github_username: BonnyCI
 
 # Build settings
 markdown: kramdown
