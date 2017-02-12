@@ -17,6 +17,7 @@ gem "minima", "~> 2.0"
 
 # This will ensure relative links in markdown files are processed correctly by Jekyll.
 gem 'jekyll-relative-links'
+gem 'jekyll-last-modified-at'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
