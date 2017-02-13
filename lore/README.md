@@ -8,8 +8,6 @@ show_header_link: true
 
 # BonnyCI Documentation
 
-[![Build Status](https://travis-ci.org/BonnyCI/lore.svg?branch=master)](https://travis-ci.org/BonnyCI/lore)
-
 ## Table of Contents
 
 * [Introduction](#introduction)
