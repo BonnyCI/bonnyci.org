@@ -10,6 +10,7 @@ permalink: /lore/admins/
 
 * [Architecture](#architecture)
 * [Holding-a-Node](#holding-a-node)
+* [Rebooting Zuul](#rebooting-zuul)
 
 ## Architecture
 
@@ -18,3 +19,7 @@ For information on the components of the BonnyCI system and how the connect to e
 ## Holding a Node
 
 For the process to hold and access a nodepool node, refer to the [Hold a Node page](hold-node.md).
+
+## Rebooting Zuul
+
+For the process of rebooting zuul, see the [Rebooting Zuul page](reboot-zuul.md)
