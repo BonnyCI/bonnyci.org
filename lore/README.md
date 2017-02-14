@@ -1,6 +1,6 @@
 ---
 name: lore
-title: lore
+title: Lore
 layout: default
 permalink: /lore/
 show_header_link: true
