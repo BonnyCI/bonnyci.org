@@ -32,6 +32,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/bundle
+  - README.md
 include:
   - lore
   - status
