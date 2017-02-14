@@ -8,6 +8,7 @@ permalink: /lore/end_users/status
 
 ## Table of Contents
 
+* [Zuul Status](#zuul-status)
 * [BonnyCI Status ScreenBoard](#bonnyci-status-screenboard)
   * [System Load](#system-load)
   * [Disk Free](#disk-free)
@@ -15,9 +16,13 @@ permalink: /lore/end_users/status
   * [Zuul Pipelines](#zuul-pipelines)
   * [Service Status](#service-status)
 
+## Zuul Status
+
+The [Zuul Status page](http://zuul.bonnyci.org/) has information on queue length and pipelines. When code is being tested it is listed under the pipeline and provides links to more information about them.
+
 ## BonnyCI Status ScreenBoard
 
-This section explains the components of the [BonnyCI Status ScreenBoard](https://p.datadoghq.com/sb/cbf19e221-1b77fb05f2)
+This section explains the components of the [BonnyCI Status ScreenBoard](https://p.datadoghq.com/sb/cbf19e221-1b77fb05f2).
 
 ### System Load
 
