@@ -9,3 +9,4 @@ permalink: /lore/developers/contributing/designs/
 ## Table of Contents
 
 * [Github Pull Request Check and Gate](github-pr-check-gate.md)
+* [Personal Cloud Accounts](personal-cloud-accounts.md)
