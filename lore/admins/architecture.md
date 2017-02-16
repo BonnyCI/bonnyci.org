@@ -1,6 +1,7 @@
 ---
 name: architecture
 layout: default
+permalink: /lore/admins/architecture/
 ---
 
 # Architecture
