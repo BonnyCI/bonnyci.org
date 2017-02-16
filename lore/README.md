@@ -1,14 +1,12 @@
 ---
 name: lore
-title: lore
+title: Lore
 layout: default
 permalink: /lore/
 show_header_link: true
 ---
 
 # BonnyCI Documentation
-
-[![Build Status](https://travis-ci.org/BonnyCI/lore.svg?branch=master)](https://travis-ci.org/BonnyCI/lore)
 
 ## Table of Contents
 
