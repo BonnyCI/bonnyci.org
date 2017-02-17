@@ -1,6 +1,7 @@
 ---
 name: holding a node
 layout: default
+permalink: /lore/admins/hold-node/
 ---
 
 # Holding a Node
