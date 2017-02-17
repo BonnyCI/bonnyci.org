@@ -17,6 +17,8 @@ Each BonnyCI developer is entitled to a personal cloud account and matching proj
 
 An account is a set of credentials to log into OpenStack via keystone. An account by itself is not very useful, as it requires a role within a project. A single account may have multiple roles across multiple projects. For our cloud, each developer is entitled to an account with a matching project, and a role of _member_ within the project.
 
+These personal accounts will also be granted _member_ rights on the production project(s), so that we individually can examine resources in the production project. This will likely be granted by way of a keystone group. Using a group and using individual accounts simplifies granting rights on new account creation, and removing rights when a developer leaves the project.
+
 For more about roles, see [IBM Users and Projects Documentation](http://ibm-blue-box-help.github.io/help-documentation/keystone/Managing_Users_and_Projects/)
 
 ### Quotas
