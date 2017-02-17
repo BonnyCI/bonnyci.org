@@ -28,6 +28,7 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-relative-links
+  - jekyll-last-modified-at
 exclude:
   - Gemfile
   - Gemfile.lock
