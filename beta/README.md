@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "Beta"
+permalink: /beta/
 show_header_link: true
 categories:
   - bonnyci
