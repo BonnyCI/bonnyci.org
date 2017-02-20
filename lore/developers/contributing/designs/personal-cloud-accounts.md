@@ -9,9 +9,13 @@ layout: default
 
 We now have our own Bluemix Private Cloud, with cloud_admin rights to it. This cloud is primarily intended to be used to run our BonnyCI control plane and to provide nodepool capacity for running tests. Additionally, we can make use of this cloud for personal development environments. In order to keep track of personal projects and to ensure they are created and managed in a sane way, we need to introduce some controls and automation around their creation.
 
+These personal projects and accounts are meant to be used by core BonnyCI developers and operators, not by general consumers of the BonnyCI service.
+
 ## Overview
 
 Each BonnyCI developer is entitled to a personal cloud account and matching project, with an appropriate role. A reasonable set of quotas will be enforced. Accounts and projects will be created via automation.
+
+Account requests will be made via pull requests to the automation that creates and manages the accounts. Current BonnyCI developers will discuss, debate, reject, or approve such requests.
 
 ### Accounts Projects and Roles
 
