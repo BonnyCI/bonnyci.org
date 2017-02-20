@@ -186,9 +186,7 @@ space for future updates. If you want to join our closed beta, you can
 email me personally (see below) or join us on Freenode IRC in #BonnyCI.
 
 *Clint Byrum is a Cloud Architect at IBM, you can contact him
-via Twitter: @SpamapS, or email [clint at fewbar dot com](mailto:clint at fewbar dot com)
-
-Last Updated: {% last_modified_at %B %d, %Y %}*
+via Twitter: @SpamapS, or email [clint at fewbar dot com](mailto:clint at fewbar dot com)*
 
 [os]: http://www.openstack.org/
 [j]: http://www.jenkins.io/
