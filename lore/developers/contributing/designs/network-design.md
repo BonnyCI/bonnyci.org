@@ -37,7 +37,7 @@ To allow connectivity between the two isolated networks, a single L3 router will
 
 ### Floating IPs
 
-Some of the hosts running on the control plane will need to be accessed from the outside world for various reasons.  Public addresses for floating IPs will be allocated from the `external` network that is available to our cloud, currently providing addresses from the 169.44.171.64/27 range, though our quota currently allows for 50. Each of the following hosts will also be assigned a floating IP from the external network that will be publically accessible on specific ports (see [Security Groups](#security-groups)). Public DNS hostnames will be updated accordingly:
+Some of the hosts running on the control plane will need to be accessed from the outside world for various reasons.  Public addresses for floating IPs will be allocated from the `external` network that is available to our cloud, currently providing addresses from the 169.44.171.64/27 and 169.44.161.32/27 ranges, though our quota currently allows for 50. Each of the following hosts will also be assigned a floating IP from the external network that will be publically accessible on specific ports (see [Security Groups](#security-groups)). Public DNS hostnames will be updated accordingly:
 
 * bastion.bonnyci-internal.portbleu.com <- contrasjc-bastion.portbleu.com - Provides an ssh entry point from the outside world to the rest of our infrastructure and serves automation logs via http.
 * logs.bonnyci-internal.portbleu.com <- logs.bonnyci.com - Serves test log output and other test archives via http.
