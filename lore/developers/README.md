@@ -21,6 +21,7 @@ Supported development platforms:
 
 * [Ubuntu](dev-environment/ubuntu.md)
 * [Apple's macOS](dev-environment/macOS.md)
+* [Personal Cloud Accounts](dev-environment/personal-cloud-accounts.md)
 
 ### Virtual Machines
 
