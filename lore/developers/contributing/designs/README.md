@@ -10,4 +10,5 @@ permalink: /lore/developers/contributing/designs/
 
 * [Github Pull Request Check and Gate](github-pr-check-gate.md)
 * [Personal Cloud Accounts](personal-cloud-accounts.md)
+* [Production Cloud Accounts](production-cloud-accounts.md)
 * [BonnyCI Cloud Network Design](network-design.md)
