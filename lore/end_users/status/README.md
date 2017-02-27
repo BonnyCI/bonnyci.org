@@ -16,11 +16,13 @@ permalink: /lore/end_users/status
   * [Zuul Pipelines](#zuul-pipelines)
   * [Service Status](#service-status)
 
-## Zuul Status
+## Zuul Queue Status
 
-The [Zuul Status page](http://zuul.bonnyci.org/) has information on queue length and pipelines. When code is being tested it is listed under the pipeline and provides links to more information about them.
+The [Zuul Status page](http://zuul.bonnyci.org/) has information on queue length for each pipeline. When test jobs are triggered for a change, they are listed under their respective pipeline and provide links to more information about them.
 
-## BonnyCI Status ScreenBoard
+For more information about the zuul pipelines, refer to [Pull Request Lifecycle](../use/README.md#pull-request-lifecycle).
+
+## DataDog Status ScreenBoard
 
 This section explains the components of the [BonnyCI Status ScreenBoard](https://p.datadoghq.com/sb/cbf19e221-1b77fb05f2).
 
