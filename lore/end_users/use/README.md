@@ -23,10 +23,10 @@ Now we have a pull request that has core contributor approval and successful che
 ## Pull Request Lifecycle
 
 1. New pull request is opened against your repository.
-2. BonnyCI places pull request on top of existing repository codebase and tested independent of any other open pull requests.
-3. Core contributors to the project review the pull request. If changes are requested, the pull request author will make them and amend the commit.
-4. Core contriubtors approve the pull request and add the `approved` label to the pull request.
-5. BonnyCI places all pull requests with the `approved` label on top of the existing repository codebase in the order they were submitted. If any pull request fails the testing, BonnyCI will kick that pull request out and test the remaining changes together. This testing process will recurse until the build passes.
+2. BonnyCI places pull request on top of existing repository codebase and tested independent of any other open pull requests (the `github_check` zuul pipeline).
+3. Contributors to the project review the pull request. If changes are requested, the pull request author will make them and amend the commit.
+4. A Core contriubtor gives an `approved` review.
+5. BonnyCI places all open pull requests with `approved` reviews on top of the existing repository codebase in the order they were approved (the `github_gate` zuul pipeline). If any pull request fails the testing, BonnyCI will kick that pull request out and test the remaining changes together. This testing process will recurse until the build passes.
 6. Once the pull request passes both rounds of testing, BonnyCI will automatically merge the pull request to the repository's master branch.
 
 ## BonnyCI Workflow
