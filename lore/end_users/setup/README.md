@@ -49,9 +49,9 @@ projects:
 
   - name: unique_job_name
     check_github:
-      - bonncy-run-check
+      - bonnyci-run-check
     gate_github:
-      - bonncy-run-gate
+      - bonnyci-run-gate
 
   ...
 ```
