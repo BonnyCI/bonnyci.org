@@ -22,10 +22,10 @@ Network resources will be created within a `control-plane` project.  We will be 
 We will create two separate internal networks and hosts will be given interfaces on them depending on the role of said host.
 
 * `control-plane 192.168.10.0/24` - This network will be used for communication between all of our production services, as well as automation between the bastion host and our producion servers.  As per our current infrastructure, the following static hosts will have interfaces on this network and internal DNS updated accordingly:
-  * bastion.bonncyi*internal.portbleu.com
+  * bastion.bonnyci*internal.portbleu.com
   * logs.bonnyci*internal.portbleu.com
   * merger01.bonnyci*internal.portbleu.com
-  * nodepool.bonncyi*internal.portbleu.com
+  * nodepool.bonnyci*internal.portbleu.com
   * zuul.bonnyci*internal.portbleu.com
 * `nodepool 10.0.0.0/8` - This is an shared network that will be used by nodepool slaves. None of the static service hosts within the control plane will receive an interface on this network.
 
@@ -60,10 +60,10 @@ The following security groups will be created on the `control-plane` project:
 
 The following hosts will have the corresponding security groups assigned:
 
-* bastion.bonncyi-internal.portbleu.com: sg-ssh, sg-http-https, sg-control-plane
+* bastion.bonnyci-internal.portbleu.com: sg-ssh, sg-http-https, sg-control-plane
 * logs.bonnyci-internal.portbleu.com: sg-control-plane, sg-http-https
 * merger01.bonnyci-internal.portbleu.com: sg-control-plane, sg-zuul-merger
-* nodepool.bonncyi-internal.portbleu.com: sg-control-plane
+* nodepool.bonnyci-internal.portbleu.com: sg-control-plane
 * zuul.bonnyci-internal.portbleu.com: sg-control-plane, sg-http-https
 
 SSH access to the entire infrastructure will need to happen via the bastion host as it is the only one capable of accepting SSH connections from the outside world.
