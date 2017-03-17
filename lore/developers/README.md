@@ -37,7 +37,7 @@ $ cd hoist
 To perform a full deploy:
 
 ```shell
-$ vagrant up
+$ ./tools/vagrant-deploy.sh
 ```
 
 To redeploy just the nodepool VM:
