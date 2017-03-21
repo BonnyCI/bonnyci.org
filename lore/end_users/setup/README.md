@@ -17,9 +17,34 @@ permalink: /lore/end_users/setup/
 * [Merge Options](#merge-options)
   * [Setting the Correct Merge Option](#setting-the-correct-merge-option)
 
-## Robots
+## Give BonnyCI Access
 
-The first step to getting BonnyCI into your repository is to give the robots team write access. This is so BonnyCI can automatically merge pull requests that pass all testing queues. Navigate to your repository's settings page, click on the `Collaborators & teams` section in the left-hand menu, and click `Add a team:` in the dropdown menu under the `Teams` section.
+The first step to getting BonnyCI into your repository is to give `anne-bonny`
+write access. This is so BonnyCI can set statuses and automatically merge pull
+requests that pass all testing queues. We recommend creating a `robots` team in
+your repository's owning org, but you can also just add `anne-bonny` directly as
+a collaborator.
+
+### Robots team
+
+If you want to create a team to hold `anne-bonny` in, Navigate to your
+repository's settings page, click on the `Collaborators & teams` section
+in the left-hand menu, and click `+ Create a team`. You will be added
+to the team automatically. Type `anne-bonny` into the `Add a person`
+box. This will invite anne-bonny to the team, you will need to wait
+for an admin to accept that invitation before BonnyCI will be able to
+interact with your repository.
+
+### Grant Write Access
+
+Navigate back to your repository settings, `Collaborators & teams`. If you
+created a team, click the `Add a team:` dropdown menu under the `Teams`
+section. Find your robots team there. Then select 'Write' access so the
+team can write to your repository. If you want to just add `anne-bonny`
+directly as a collaborator, you can do that as well. Simply add the user
+with Write access. As with team membership, you will need to wait for
+an admin to accept the invitation, which we will do as part of merging
+your configuration layout.
 
 For more on organizations and teams, check out the [Github documentation](https://help.github.com/enterprise/2.8/admin/guides/user-management/organizations-and-teams/).
 
