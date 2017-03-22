@@ -15,7 +15,8 @@ permalink: /lore/developers/
 
 ## Development Environment
 
-Before hacking on BonnyCI, we'll need to set up a development environment on our local machine.
+Before hacking on BonnyCI, we'll need to set up a development environment on
+our local machine.
 
 Supported development platforms:
 
@@ -25,7 +26,11 @@ Supported development platforms:
 
 ### Virtual Machines
 
-You can test changes to BonnyCI locally by exercising some tools defined in [hoist](www.github.com/BonnyCI/hoist). Hoist is a set of ansible playbooks that automate the deployment of a BonnyCI environment. Be sure that you have completed the `Virtualization Tools` section of your OS's [Development Environment](#development-environment) page before proceeding.
+You can test changes to BonnyCI locally by exercising some tools defined in
+[hoist](www.github.com/BonnyCI/hoist). Hoist is a set of ansible playbooks that
+automate the deployment of a BonnyCI environment. Be sure that you have
+completed the `Virtualization Tools` section of your OS's [Development
+Environment](#development-environment) page before proceeding.
 
 Clone hoist and navigate to its base directory:
 
@@ -40,11 +45,11 @@ To perform a full deploy:
 $ ./tools/vagrant-deploy.sh
 ```
 
-To redeploy just the nodepool VM:
+To redeploy the nodepool VM:
 
 ```shell
 $ vagrant destroy nodepool
-$ vagrant up nodepool
+$ ./tools/vagrant-deploy.sh
 ```
 
 To inspect the zuul VM:
@@ -58,9 +63,7 @@ $ logout
 To test changes to the zuul role:
 
 ```shell
-$ vagrant ssh bastion
-$ sudo -i -u cideploy
-$ /vagrant/tools/vagrant-run-ansible.sh --limit zuul
+$ ./tools/vagrant-deploy.sh --limit zuul
 ```
 
 To tear down the entire stack when you're done:
