@@ -85,7 +85,16 @@ Create a pull request to the [hoist](https://github.com/BonnyCI/hoist) project o
 
 ## Project Test Configuration
 
-Projects are free to define their tests and test suites within their repository provided it contains a known entry point for BonnyCI to use to begin the execution.  When BonnyCI begins a test run, it will first prepare a checkout of the git repository that contains the proposed change.  It will then attempt to execute a script located at ``./bonnyci/run.sh`` and consider a exit code of ``0`` as a successful test and anything other than ``0`` as a failed test.  If the repository does not contain ``./bonnyci/run.sh`` or it is not executable, the test run will fail. Users are free to customize ``./bonnyci/run.sh`` in any way they choose.
+Projects are free to define their tests and test suites within their
+repository provided it contains a known entry point for BonnyCI
+to use to begin the execution.  When BonnyCI begins a test run, it
+will first prepare a checkout of the git repository that contains the
+proposed change.  It will then attempt to execute a script located at
+``.bonnyci/run.sh`` and consider a exit code of ``0`` as a successful
+test and anything other than ``0`` as a failed test.  If the repository
+does not contain ``.bonnyci/run.sh`` or it is not executable, the test
+run will fail. Users are free to customize ``.bonnyci/run.sh`` in any
+way they choose.
 
 This script is run to execute tests in both the check and gate pipelines.  If you'd like to differentiate the test runs between the different pipelines, check the setting of the ``BONNYCI_TEST_PIPELINE`` variable, which will be set to ``check`` or ``gate``, respsectively.
 
