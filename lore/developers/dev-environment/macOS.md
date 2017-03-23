@@ -10,10 +10,11 @@ layout: default
 * [Basic Tools](#basic-tools)
 * [Python Tools](#python-tools)
 * [Virtualization Tools](#virtualization-tools)
+* [Docker](#docker)
 
 ## Basic Tools
 
-Install [Homebrew](http://brew.sh/) to get a package manager.
+Install [Homebrew](https://brew.sh/) to get a package manager.
 
 Install some basic command line tools:
 
@@ -64,3 +65,7 @@ Install [vagrant-hostmanager](https://github.com/devopsgroup-io/vagrant-hostmana
 ```shell
 $ vagrant plugin install vagrant-hostmanager vagrant-triggers
 ```
+
+## Docker
+
+Follow the instructions in Docker's docs to [install Docker for Mac](https://docs.docker.com/docker-for-mac/install/).
