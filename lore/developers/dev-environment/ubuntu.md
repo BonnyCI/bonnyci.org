@@ -9,6 +9,7 @@ layout: default
 
 * [Python Tools](#python-tools)
 * [Virtualization Tools](#virtualization-tools)
+* [Docker](#docker)
 
 ## Python Tools
 
@@ -50,3 +51,7 @@ Install [vagrant-hostmanager](https://github.com/devopsgroup-io/vagrant-hostmana
 ```shell
 $ vagrant plugin install vagrant-hostmanager vagrant-triggers
 ```
+
+## Docker
+
+Follow the instructions in Docker's docs to [get Docker for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/).

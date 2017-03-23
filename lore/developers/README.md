@@ -10,6 +10,7 @@ permalink: /lore/developers/
 
 * [Development Environment](#development-environment)
   * [Virtual Machines](#virtual-machines)
+  * [Docker](#docker)
 * [Contributing](#contributing)
 * [IRC](#irc)
 
@@ -70,6 +71,48 @@ To tear down the entire stack when you're done:
 
 ```shell
 $ vagrant destroy
+```
+
+## Docker
+
+You can test changes to BonnyCI locally by exercising some tools defined in
+[hoist](www.github.com/BonnyCI/hoist). Hoist is a set of ansible playbooks that
+automate the deployment of a BonnyCI environment. Be sure that you have
+completed the `Docker` section of your OS's [Development
+Environment](#development-environment) page before proceeding.
+
+Clone hoist and navigate to its base directory:
+
+```shell
+$ git clone git@github.com:BonnyCI/hoist.git
+$ cd hoist
+```
+
+To perform a full deploy:
+
+```shell
+$ ./tools/docker-deploy.sh
+```
+
+To inspect the container:
+
+```shell
+$ docker exec -it allinone /bin/bash
+$ # netstat, tcpdump, tail logs, etc.
+$ exit
+```
+
+To test changes to the zuul role:
+
+```shell
+$ ansible-playbook -i inventory/allinone install-ci.yml -c docker -e @secrets.yml.example --limit zuul
+```
+
+To tear down the entire stack when you're done:
+
+```shell
+$ docker stop allinone
+$ docker rm allinone
 ```
 
 ## Contributing
