@@ -126,4 +126,8 @@ A brief note on repository naming...
 
 ## IRC
 
-For discussions about BonnyCI, join us on [freenode](https://freenode.net) #BonnyCi!
+For discussions about BonnyCI, join us on [freenode](https://freenode.net) #BonnyCI!
+
+## Mailing List
+
+The mailing list can be subscribed to [here](http://list.bonnyci.org/mailman/listinfo/bonnyci_list.bonnyci.org)
