@@ -119,3 +119,14 @@ For more on these options and what they mean, read the [documentation on merge m
 In order for BonnyCI to function correctly, please only allow merge commits. From your repository's home page, navigate to the `Settings` tab. Scroll down to the section labeled `Merge button`, and ensure that it matches the following:
 
 ![Correct Merge Button Configuration](../../misc/images/mergebutton.png)
+
+## Branch Protections
+
+Some branch protections will not interact well with BonnyCI, and some are fine.
+
+### Require branches to be up to date before merging
+
+This protection is particularly problematic, as BonnyCI will be merging
+code and ensuring that the latest commits are tested with the tip
+of master. If this is turned on, you will see spurious merge failure
+comments from BonnyCI in approved PR's.
