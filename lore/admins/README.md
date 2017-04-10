@@ -9,6 +9,7 @@ permalink: /lore/admins/
 ## Table of Contents
 
 * [Architecture](#architecture)
+* [Backups](#backups)
 * [Deploying](#deploying)
 * [Holding-a-Node](#holding-a-node)
 * [Rebooting Zuul](#rebooting-zuul)
@@ -16,6 +17,10 @@ permalink: /lore/admins/
 ## Architecture
 
 For information on the components of the BonnyCI system and how the connect to each other, refer to the [Architecture page](architecture.md).
+
+## Backups
+
+For information on BonnyCI system backups, refer to the [Backups page](backups.md).
 
 ## Deploying
 
