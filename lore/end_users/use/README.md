@@ -11,6 +11,7 @@ permalink: /lore/end_users/use/
 * [Automated Testing](#automated-testing)
 * [Pull Request Lifecycle](#pull-request-lifecycle)
 * [BonnyCI Workflow](#bonnyci-workflow)
+* [Handling Merge Failures](#handling-merge-failures)
 
 ## Automated Testing
 
@@ -34,3 +35,41 @@ Now we have a pull request that has core contributor approval and successful che
 This image illustrates the BonnyCI continuous integration pipeline.
 
 ![BonnyCI Workflow](../../misc/images/BonnyCIWorkflow.png)
+
+## Handling Merge Failures
+
+Anne-Bonny, the bot user which handles checking and gating pull requests, may
+report back to a pull request informing the developer and reviewers that she
+encountered a merge failure. This typically happens in the gate queue, and will
+usually fall into one of the two categories detailed below.
+
+### Stale Pull Requests
+
+Occasionally, a pull request may fall by the wayside while other changes are
+given a higher priority by reviewers. This can leave behind a pull request
+which has become stale, meaning that the changes it is making are based off of
+an older git history. In most cases, this can be resolved with a simple rebase:
+
+```shell
+  $ git fetch <upstream-remote>
+  $ git rebase <upstream-remote>/master
+  $ git push <your-remote>/<branch>
+```
+
+This will update the pull request's branch by taking its commit(s) off of the
+branch's HEAD, updating the branch to the new compare branch's HEAD, and then
+placing the pull request's commit(s) back on top. This usually results in a
+branch that is n number of commits ahead of origin/master, where n is the
+number of commits in your pull request (preferably one).
+
+### Competing Pull Requests
+
+What if the merge failure is a little more complicated?
+
+It is possible that two or more pull requests will attempt to change the same
+parts of a codebase, and one will merge prior to the other. This is a
+natural occurence when communities collaborate on a project, and it results in
+what is known in git as a merge conflict.
+
+For information on how to resolve merge conflicts, refer to
+[Resolving a merge conflict on the command line](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/).
