@@ -73,7 +73,7 @@ To tear down the entire stack when you're done:
 $ vagrant destroy
 ```
 
-## Docker
+### Docker
 
 You can test changes to BonnyCI locally by exercising some tools defined in
 [hoist](www.github.com/BonnyCI/hoist). Hoist is a set of ansible playbooks that
