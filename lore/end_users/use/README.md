@@ -73,3 +73,10 @@ what is known in git as a merge conflict.
 
 For information on how to resolve merge conflicts, refer to
 [Resolving a merge conflict on the command line](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/).
+
+**NOTE**: Repositories which require multiple continuous integration checks
+(ex: a repository which has both BonnyCI and Travis CI) may encounter merge
+failures from BonnyCI. This is a definite if branch protection settings for a
+repository require that pull requests pass checks from CI systems other than
+BonnyCI. For this reason, the use of other CI services which require passing
+checks through branch protection alongside BonnyCI is discouraged.
