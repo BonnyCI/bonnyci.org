@@ -12,3 +12,4 @@ permalink: /lore/developers/contributing/designs/
 * [Personal Cloud Accounts](personal-cloud-accounts.md)
 * [Production Cloud Accounts](production-cloud-accounts.md)
 * [BonnyCI Cloud Network Design](network-design.md)
+* [Network Design V2 Changes: One bastion, Multiple Zuuls](network-design-v2.md)
