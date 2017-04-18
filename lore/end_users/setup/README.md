@@ -14,7 +14,9 @@ permalink: /lore/end_users/setup/
   * [Zuul Layout Configuration](#zuul-layour-configuration)
 * [Project Test Configuration](#project-test-configuration)
 * [Merge Options](#merge-options)
+* [Branch Protections](#branch-protections)
   * [Setting the Correct Merge Option](#setting-the-correct-merge-option)
+  * [Removing restrictions on who can push](#removing restrictions on who can push)
 
 ## Installation
 
@@ -94,3 +96,10 @@ This protection is particularly problematic, as BonnyCI will be merging
 code and ensuring that the latest commits are tested with the tip
 of master. If this is turned on, you will see spurious merge failure
 comments from BonnyCI in approved PR's.
+
+### Removing restrictions on who can push
+
+This protection adds an extra layer of permissions to further limit who is
+allowed to push to a given branch of the repository. Unfortunately it is not
+possible to explicitly grant the BonnyCI bot extra rights with this option. If
+this option is used, it will prevent BonnyCI from being able to merge changes.
