@@ -8,8 +8,7 @@ permalink: /lore/end_users/setup/
 
 ## Table of Contents
 
-* [Robots](#robots)
-* [Webhook](#webhook)
+* [Installation](#installation)
 * [Hoist Configuration](#hoist-configuration)
   * [Zuul Job Configuration](#zuul-job-configuration)
   * [Zuul Layout Configuration](#zuul-layour-configuration)
@@ -17,48 +16,13 @@ permalink: /lore/end_users/setup/
 * [Merge Options](#merge-options)
   * [Setting the Correct Merge Option](#setting-the-correct-merge-option)
 
-## Give BonnyCI Access
+## Installation
 
-The first step to getting BonnyCI into your repository is to give `anne-bonny`
-write access. This is so BonnyCI can set statuses and automatically merge pull
-requests that pass all testing queues. We recommend creating a `robots` team in
-your repository's owning org, but you can also just add `anne-bonny` directly as
-a collaborator.
+BonnyCI makes use of GitHub's [integration feature](https://developer.github.com/early-access/integrations/).
+To install it go to the [BonnyCI integration configuration page](https://github.com/integration/bonnyci) and press the "Install" button.
+An integration is installed to your user or your organization. You can then select whether to make it available to all repositories or only selected ones.
 
-### Robots team
-
-If you want to create a team to hold `anne-bonny` in, Navigate to your
-repository's settings page, click on the `Collaborators & teams` section
-in the left-hand menu, and click `+ Create a team`. You will be added
-to the team automatically. Type `anne-bonny` into the `Add a person`
-box. This will invite anne-bonny to the team, you will need to wait
-for an admin to accept that invitation before BonnyCI will be able to
-interact with your repository.
-
-### Grant Write Access
-
-Navigate back to your repository settings, `Collaborators & teams`. If you
-created a team, click the `Add a team:` dropdown menu under the `Teams`
-section. Find your robots team there. Then select 'Write' access so the
-team can write to your repository. If you want to just add `anne-bonny`
-directly as a collaborator, you can do that as well. Simply add the user
-with Write access. As with team membership, you will need to wait for
-an admin to accept the invitation, which we will do as part of merging
-your configuration layout.
-
-For more on organizations and teams, check out the [Github documentation](https://help.github.com/enterprise/2.8/admin/guides/user-management/organizations-and-teams/).
-
-## Webhook
-
-The next step to getting BonnyCI into your repository is to add the BonnyCI webhook. This is to notify BonnyCI of events taking place in your repository, such as newly opened pull requests. Navigate to your repository's settings page, click on the `Webhooks` section in the left-hand menu, and click the `Add webhook` button to the right. Paste the following link into the `Payload URL` item:
-
-```webhook
-https://zuul.bonnyci.org/connection/github/payload
-```
-
-Ensure the `Content Type` dropdown is set to `application/json`, the `Send me everything.` radio button is selected, and the `Active` box is checked. Once this is done, click the green `Add webhook` button to finish. Here is a sample of what the settings will look like:
-
-![Correct Webhook Configuration](../../misc/images/BonnyCIWebhook.png)
+You may notice here that BonnyCI requests write access to these repositories. This is required for BonnyCI to be able to merge pull requests on your repositories.
 
 ## Hoist Configuration
 
