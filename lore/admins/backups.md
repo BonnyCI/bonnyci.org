@@ -12,6 +12,7 @@ permalink: /lore/admins/backups/
 * [Backup Sources](#backup-sources)
 * [Backup Destinations](#backup-destinations)
 * [Frequency and Retention](#frequency-and-retention)
+* [Implementation Details](#implementation-details)
 
 ## Risks
 
@@ -41,16 +42,94 @@ analyses, there are several nice-to-have backup items.
 
 ## Backup Destination
 
-* Dedicated VM (on-site)
+* Dedicated VM (`backups.internal.opentechsjc.bonnyci.org`)
 
 ## Frequency and Retention
 
-Github repos are to be backed-up once per week, with one-month retention.
+| Source | Frequency | Retention |
+| ------ | --------- | --------- |
+| Github Repos | Daily | 1 Month |
+| Zuul Merger git repos | Daily | 2 weeks |
+| System logs | Hourly | 1 Month |
+| Service logs | Hourly | 1 Month |
+| Test output | Daily | 2 weeks |
 
-Zuul merger repos are to be backed up once per day and retained for 2 weeks.
+## Implementation Details
 
-System and service logs are to be backed up fully once per day, and
-incrementally once per hour; with a retention of one month.
+We use [borg backup](https://borgbackup.readthedocs.io/en/stable/index.html) to
+implement our backup strategy. For more information, read
+[this quickstart](https://borgbackup.readthedocs.io/en/stable/quickstart.html).
 
-Test output is to be backed up fully once per week, and incrementally once per
-day; with a retention of one week.
+In order to use a pull model rather than a push model for better trust
+management, we augment borg backup with sshfs to mount the client filesystem
+on the backup host over ssh.
+
+Each client host has a dedicated borg repo which contains two types of
+snapshots: `hourly` and `daily`. The snapshot name is prefixed with the type,
+followed by an ISO-8601 date. *Daily and hourly snapshots do NOT contain the
+same file sets*.
+
+### Creating Backups
+
+The backup-server role in hoist configures the bulk of the setup, including
+two cron jobs: an hourly job and a daily job. Each job loops through the
+configured hosts and performs the following steps:
+
+1. Mounts the entire client host filesystem using sshfs and the root user.
+2. Creates a new snapshot of the configured paths for the type of frequency.
+3. Deletes expired snapshots, if any.
+4. Unmounts the client filesystem.
+
+The job then moves on to the next host and repeats the process.
+
+### Restoring from a Backup
+
+In order to restore from a backup, first become the backup user:
+
+```text
+cideploy@bastion $ ssh ubuntu@backups.internal.opentechsjc.bonnyci.org
+ubuntu@backups $ sudo -i -u backup
+backup@backups $
+```
+
+Next, list available snapshots for the given host:
+
+```text
+backup@backups $ borg list -v /var/lib/backups/${HOST}
+```
+
+This will display the snapshot names on the left and their creation date on the
+right.
+
+To examine the contents of a snapshot:
+
+```text
+backup@backups $ borg list -v /var/lib/backups/${HOST}::${SNAPSHOT}
+```
+
+Once a snapshot to restore has been chosen, mount the client filesystem on the
+backup server:
+
+```text
+backup@backups $ sshfs root@${CLIENT}:/ /mnt/sshfs/${CLIENT}
+```
+
+To restore specific files or directories from the snapshot:
+
+```text
+backup@backups $ borg extract -v /var/lib/backups/${HOST}::${SNAPSHOT} ${FILES}
+```
+
+#### OR
+
+To restore the entire snapshot:
+
+```text
+backup@backups $ borg extract -v /var/lib/backups/${HOST}::${SNAPSHOT}
+```
+
+Finally, make sure to unmount the client filesystem:
+
+```text
+backup@backups $ fusermount -u /mnt/sshfs/${CLIENT}
+```
