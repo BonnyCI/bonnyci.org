@@ -13,6 +13,7 @@ matrix:
   fast_finish: true
 
 env:
+  - TEST_RUN="tests/filename-test.sh"
   - TEST_RUN="tests/markdownlint-cli-test.sh"
   - TEST_RUN="tests/shellcheck-test.sh"
   - TEST_RUN="tests/signed-off-by-test.sh"
