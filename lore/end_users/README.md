@@ -13,6 +13,7 @@ permalink: /lore/end_users/
 * [Bug Reports](#bug-reports)
 * [Feature Requests](#feature-requests)
 * [Status Page](#status-page)
+* [Outage Reports](#outage-reports)
 
 ## Setup
 
@@ -33,3 +34,7 @@ Check out the [feature request documentation](issues/README.md#feature-requests)
 ## Status Page
 
 Check out the [status page](../../status) for a list of BonnyCI's status pages.
+
+## Outage Reports
+
+Check out the [outage reports](rca/README.md) for an explination of the RCA process and a list of past outages.
